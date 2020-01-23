@@ -6,7 +6,8 @@
 
 import React from 'react';
 import Swiper from 'react-id-swiper';
-import 'react-id-swiper/lib/styles/css/swiper.css';
+// eslint-disable-next-line import/no-unresolved
+// import 'react-id-swiper/lib/styles/css/swiper.css';
 import { makeStyles } from '@material-ui/core/styles';
 // import PropTypes from 'prop-types';
 // import styled from 'styled-components';

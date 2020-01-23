@@ -22,11 +22,11 @@ import { makeSelectUsername } from './selectors';
 import { findAllCoinMarkets } from './actions';
 import reducer from './reducer';
 import saga from './saga';
-// import CoinMarkets from 'components/CoinMarkets';
-// import SwiperSlide from 'components/SwiperSlide';
-// import AppBar from '@material-ui/core/AppBar';
-// import Tabs from '@material-ui/core/Tabs';
-// import Tab from '@material-ui/core/Tab';
+import CoinMarkets from 'components/CoinMarkets';
+import SwiperSlide from 'components/SwiperSlide';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
 const key = 'home';
 
@@ -92,22 +92,22 @@ export function HomePage() {
   return (
     <div className={classes.root}>
       <div className={classes.coinmarket}>
-        {/* <AppBar position="static" className={classes.appBar}>
+        <AppBar position="static" className={classes.appBar}>
           <Tabs value={value} onChange={handleChange} className={classes.tabs}>
             <Tab label="KRW" className={classes.tabs} />
             <Tab label="USD" className={classes.tabs} />
             <Tab label="BTC" className={classes.tabs} />
           </Tabs>
         </AppBar>
-        <CoinMarkets coinMarket={home.home && home.home.body} value={value} /> */}
+        <CoinMarkets coinMarket={home.home && home.home.body} value={value} />
       </div>
     </div>
   );
 }
 
 HomePage.propTypes = {
-  // home: PropTypes.any,
-  // findAllCoinMarketsGet: PropTypes.func,
+  home: PropTypes.any,
+  findAllCoinMarketsGet: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
@@ -115,7 +115,7 @@ const mapStateToProps = createStructuredSelector({
   username: makeSelectUsername(),
   loading: makeSelectLoading(),
   error: makeSelectError(),
-  // home: makeSelectHome(),
+  home: makeSelectHome(),
 });
 
 export function mapDispatchToProps(dispatch) {

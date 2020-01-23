@@ -25,7 +25,7 @@ public class OrderTest extends CubeexchangeWebApiApplicationTests {
         order.setFee(new BigDecimal(2));
         order.setFeeRate(new BigDecimal(3));
         order.setOrderStatus(OrderStatus.NEW);
-        order.setOrderVolume(1);
+        order.setOrderVolume(BigDecimal.valueOf(1));
         order.setOrderPosition(OrderPosition.BUY);
     }
 }

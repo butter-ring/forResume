@@ -15,7 +15,7 @@ public class rabbitmqTest {
     @Test
     public void sendMessageTest() {
         RabbitTemplate rabbitTemplate = new RabbitTemplate();
-        CachingConnectionFactory factory = new CachingConnectionFactory("192.168.56.102", 5672);
+        CachingConnectionFactory factory = new CachingConnectionFactory("192.168.56.101", 5672);
         factory.setUsername("rabbitmq");
         factory.setPassword("0909");
         SampleMessage message = new SampleMessage();

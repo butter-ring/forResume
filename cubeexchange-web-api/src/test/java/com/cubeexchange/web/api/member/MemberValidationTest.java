@@ -16,7 +16,6 @@ import java.time.ZoneOffset;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@Slf4j
 @ActiveProfiles("local")
 public class MemberValidationTest extends CubeexchangeWebApiApplicationTests {
     public static Logger log = LoggerFactory.getLogger(MemberValidationTest.class);
