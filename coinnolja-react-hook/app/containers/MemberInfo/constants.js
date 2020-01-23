@@ -1,0 +1,20 @@
+/*
+ *
+ * MemberInfo constants
+ *
+ */
+
+export const DEFAULT_ACTION = 'app/MemberInfo/DEFAULT_ACTION';
+export const FIND_MEMBERINFO = 'app/MemberInfo/FIND_MEMBERINFO';
+export const FIND_MEMBERINFO_SUCCESS = 'app/MemberInfo/FIND_MEMBERINFO_SUCCESS';
+export const FIND_MEMBERINFO_ERROR = 'app/MemberInfo/FIND_MEMBERINFO_ERROR';
+export const FIND_MEMBERBOARDLIST = 'app/MemberInfo/FIND_MEMBERBOARDLIST';
+export const FIND_MEMBERBOARDLIST_SUCCESS =
+  'app/MemberInfo/FIND_MEMBERBOARDLIST_SUCCESS';
+export const FIND_MEMBERBOARDLIST_ERROR =
+  'app/MemberInfo/FIND_MEMBERBOARDLIST_ERROR';
+export const FIND_MEMBERREPLYLIST = 'app/MemberInfo/FIND_MEMBERREPLYLIST';
+export const FIND_MEMBERREPLYLIST_SUCCESS =
+  'app/MemberInfo/FIND_MEMBERREPLYLIST_SUCCESS';
+export const FIND_MEMBERREPLYLIST_ERROR =
+  'app/MemberInfo/MEMBERREPLYLIST_ERROR';

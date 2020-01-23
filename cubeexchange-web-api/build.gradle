@@ -1,0 +1,67 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
+    id 'org.web3j' version '4.1.2'
+}
+
+sourceCompatibility = 1.8
+
+web3j {
+    generatedPackageName = 'org.web3j.sample.contracts.generated'
+    excludedContracts = ['Mortal']
+}
+
+ext {
+    web3jVersion = '4.2.0'
+    logbackVersion = '1.2.3'
+    junitVersion = '4.12'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.cubeexchange.web'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+bootJar {
+    launchScript()
+    version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+
+    implementation 'com.sendgrid:sendgrid-java:4.4.1'
+    implementation 'com.nimbusds:nimbus-jose-jwt:7.1'
+    implementation 'org.apache.commons:commons-lang3'
+    implementation 'com.amazonaws:aws-java-sdk:1.11.538'
+
+    implementation('org.springframework.boot:spring-boot-starter-amqp')
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.0'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'mysql:mysql-connector-java'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.projectreactor:reactor-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+    implementation "org.web3j:core:$web3jVersion",
+            "ch.qos.logback:logback-core:$logbackVersion",
+            "ch.qos.logback:logback-classic:$logbackVersion"
+    compile 'org.springframework.boot:spring-boot-starter-amqp'
+    compile 'com.warrenstrange:googleauth:1.1.2'
+}
